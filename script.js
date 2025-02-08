@@ -42,8 +42,9 @@ function loadAnimation() {
   let tl = gsap.timeline();
 
   tl.to(".main", {
-    display: "none"
-  })
+    opacity: 0,
+    PointerEvents: "none",
+  });
   tl.from(
     ".counter",
     {
@@ -88,8 +89,9 @@ function loadAnimation() {
     ease: "power3.in",
   });
   tl.to(".main", {
-    display:"block"
-  })
+    opacity: 1,
+    PointerEvent: "auto",
+  });
   tl.from(
     "nav",
     {
@@ -241,7 +243,7 @@ function fadeAnimation() {
     chars.forEach((char) => {
       char.classList.add("italic");
     });
-    gsapFade()
+    gsapFade();
   });
   word.addEventListener("mouseleave", () => {
     chars.forEach((char) => {
